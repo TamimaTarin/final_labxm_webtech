@@ -1,7 +1,7 @@
 <fieldset>
     <legend><b>REGISTRATION</b></legend>
 	<form>
-	<script type="text/javascript" src="validation.js"></script>
+	<script type="text/javascript" src="Regcheck.js"></script>
 		<br/>
 		<table>
 		<tr><td><hr/></td></tr>
@@ -19,13 +19,13 @@
             <tr><td><hr/></td></tr>
 			<tr>
 				<td>Password</td>
-				<td><input name="password" type="password"></td>
+				<td><input name="password" id="password" type="password"></td>
 				<td></td>
 			</tr>		
 			<tr><td><hr/></td></tr>
 			<tr>
 				<td>Confirm Password</td>
-				<td><input name="confirmPassword" type="password"></td>
+				<td><input name="confirmPassword" id="cpassword" type="cpassword"></td>
 				<td></td>
 			</tr>					
 			<tr><td><hr/></td></tr>
@@ -40,8 +40,8 @@
 			<tr>
 					<td>User Type</td>
 					<td>
-						<input type="radio" name="type"/> user
-						<input type="radio" name="type"/> admin
+						<input type="radio" id="type" name="type"/> user
+						<input type="radio" id="type" name="type"/> admin
 					</td>
 				</tr>		
 					  
@@ -49,7 +49,8 @@
 				</tr>
 		</table>
 		<hr/>
-		<input type="submit" value="Submit">
-	     	<td><a href ="Reg.html">sign up</a></td>
+		<input type="submit" value="Submit" onclick="loadDoc()"/>
+	    <td><a href ="login.html">login</a></td>
 	</form>
 </fieldset>
+<center><h1 id="show"></h1></center>
